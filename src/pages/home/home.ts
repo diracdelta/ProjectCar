@@ -9,7 +9,6 @@ import { CardetailsPage } from '../cardetails/cardetails';
 export class HomePage {
 
   private cars: Array<carInfo> = [];
-  private selectedCar: string;
 
   constructor(public navCtrl: NavController) {
     for(var i = 0; i < 10; i++) {
