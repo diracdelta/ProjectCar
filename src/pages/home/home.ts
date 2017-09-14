@@ -13,7 +13,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
     for(var i = 0; i < 10; i++) {
-      this.cars.push({carID: "" + (i+1)});
+      this.cars.push({carID: "" + (i+1), thumbsUps: i});
     }
   }
 
@@ -24,8 +24,12 @@ export class HomePage {
     })
   }
 
+  increment(car: carInfo) {
+    car.thumbsUps++
+  }
 }
 
 interface carInfo {
   carID: string
+  thumbsUps: number
 }
