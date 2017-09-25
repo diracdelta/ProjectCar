@@ -14,5 +14,20 @@
 
 
 <ion-content padding>
-  <p>{{carID}}</p>
+  <ion-card>
+    <div class="row">
+      <ion-slides [loop]=true>
+        <ion-slide *ngFor="let image of images;">
+          <h1>Image {{image}}</h1>
+        </ion-slide>
+      </ion-slides>
+    </div>    
+    <div class="row">
+      <div class="col">
+        <button (click)="schedule" ion-button full >
+          <p> Schedule Test Drive<p>
+        </button>
+      </div>
+    </div>
+  </ion-card>
 </ion-content>
